@@ -11,7 +11,7 @@
 ```python
 from library import Library
 
-db = Library("MyDatabase")
+db = Database("MyDatabase")
 db.create_table("CREATE TABLE IF NOT EXISTS users (id INT, name VARCHAR(100));")
 db.insert_into("INSERT INTO users (id, name) VALUES (1, 'Isreal');")
 db.query("SELECT * FROM users;")
