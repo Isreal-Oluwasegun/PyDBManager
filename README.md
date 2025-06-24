@@ -11,7 +11,14 @@
 ```python
 from database import Database
 
-db = Database("MyDatabase")
+
+db = Database(
+    dbname="MyDatabase",
+    host="localhost",     #  Your MySQL host (default is localhost)
+    user="root",          # Your MySQL username (default is root)
+    password="your_password_here"  # your MySQL password
+)
+
 db.create_table("CREATE TABLE IF NOT EXISTS users (id INT, name VARCHAR(100));")
 db.insert_into("INSERT INTO users (id, name) VALUES (1, 'Isreal');")
 db.query("SELECT * FROM users;")

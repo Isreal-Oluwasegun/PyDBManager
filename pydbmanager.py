@@ -26,20 +26,21 @@ class Database:
         query(command): Runs a SELECT statement and displays results.
     """
 
-    def __init__(self, dbname):
+    def __init__(self, dbname, host="localhost", user="root", password=None):
         self.__db = dbname
+        self.__host = host
+        self.__user = user
+        self.__password = password
         self.__connection = self.__establish_connection()
         self.__cursor = self.__connection.cursor()
         self.__create_database(self.__db)
 
-
-    @staticmethod
-    def __establish_connection():
+    def __establish_connection(self):
         try:
             connection = mysql.connector.connect(
-                host = "localhost",
-                user = "root",
-                password = "Makinde0604",
+                host = self.__host,
+                user = self.__user,
+                password = self.__password
                 )
             print("Connection successful")
         except Exception as e:
@@ -145,7 +146,8 @@ class Database:
 
 
 if __name__== "__main__":
-    db = Database("MyDatabase")
+    db = Database("MyDatabase", password="Makinde0604")
     db.create_table("CREATE TABLE IF NOT EXISTS users (id INT, name VARCHAR(100));")
     db.insert_into("INSERT INTO users (id, name) VALUES (1, 'Isreal');")
     db.query("SELECT * FROM users;")
+        
