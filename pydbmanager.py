@@ -144,10 +144,8 @@ class Database:
             
 
 
-
-library = Library("Mangooro")
-#library.create_table("CREATE TABLE student (name varchar(19), age int)")
-library.query("SELECT * FROM man;")
-#library.insert_into("INSERT INTO man() values('segun', 16);")
-
-
+if __name__== "__main__":
+    db = Database("MyDatabase")
+    db.create_table("CREATE TABLE IF NOT EXISTS users (id INT, name VARCHAR(100));")
+    db.insert_into("INSERT INTO users (id, name) VALUES (1, 'Isreal');")
+    db.query("SELECT * FROM users;")
