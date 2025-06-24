@@ -1,6 +1,6 @@
 import mysql.connector
 
-class Library:
+class Database:
 
     """
     Library Module
