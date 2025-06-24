@@ -1,6 +1,6 @@
 # PyDBManager
 
-**PyDBManager** is a lightweight Python utility for managing MySQL databases through dynamic SQL. It simplifies database setup and provides convenient methods for creating tables, inserting data, and running queries — all from user-provided SQL strings.
+**PyDBManager** is a lightweight Python utility for managing MySQL databases through dynamic SQL. It simplifies database setup and provides convenient methods for creating tables, inserting data, and running queries, all from user-provided SQL strings.
 
 ## Features
 - Connects and selects MySQL databases automatically
