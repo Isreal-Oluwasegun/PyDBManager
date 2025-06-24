@@ -13,7 +13,7 @@ from database import Database
 
 
 db = Database(
-    dbname="MyDatabase",
+    dbname="DatabaseName",
     host="localhost",     #  Your MySQL host (default is localhost)
     user="root",          # Your MySQL username (default is root)
     password="your_password_here"  # your MySQL password
