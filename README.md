@@ -9,7 +9,7 @@
 
 ## Usage
 ```python
-from database import CreateDatabase
+from database import Database
 
 db = Database("MyDatabase")
 db.create_table("CREATE TABLE IF NOT EXISTS users (id INT, name VARCHAR(100));")
